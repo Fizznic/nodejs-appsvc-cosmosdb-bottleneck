@@ -58,9 +58,7 @@ if([string]::IsNullOrWhiteSpace($location)) {
     $location = "eastus"
 }
 
-$resourceGroup = $deploymentName + $location + "-rg"
-Write-Host "Creating resource group " $resourceGroup
-az group create --location $location --name $resourceGroup --subscription $selectedSubscription
+$resourceGroup = "FSTRUES"
 $databaseName = $deploymentName + "db"
 
 Write-Host "Deploying Sample application.. (this might take a few minutes)"
